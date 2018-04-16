@@ -1,6 +1,6 @@
 # Monster-Battles
 
-This is a command line game made while learning to program with python
+This is a command line game made while I was learning to program with python
 
 ## Getting Started
 
@@ -15,3 +15,6 @@ Python 3
 ```
 Python game.py
 ```
+
+## Command Line Preview
+![alt text]( "Game Preview")
