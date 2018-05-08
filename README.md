@@ -17,4 +17,4 @@ Python game.py
 ```
 
 ## Command Line Preview
-![alt text]( "Game Preview")
+![alt text](https://github.com/glennsvel90/Monster-Battles/blob/master/gamepreview.PNG "Game Preview")
