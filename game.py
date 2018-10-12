@@ -16,6 +16,7 @@ def clear():
         os.system('clear')
 
 class Game():
+    """ The monster-battles game with functions """
 
     def setup(self):
         self.player = Character()
@@ -33,6 +34,7 @@ class Game():
             return None
 
     def monster_turn(self):
+        """ Sequence of events during enemy's turn """
         if self.monster.attack():
             print("{} is attacking!".format(self.monster))
 
