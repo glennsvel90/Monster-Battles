@@ -19,6 +19,7 @@ class Game():
     """ The monster-battles game with functions """
 
     def setup(self):
+        """ Create instances of all the characters in the game """
         self.player = Character()
         self.monsters = [
         Goblin(),
@@ -26,7 +27,9 @@ class Game():
         Dragon()
         ]
         self.monster = self.get_next_monster()
+        
     def get_next_monster(self):
+        """ Make the next monster be able to approach you """
         try:
             return self.monsters.pop(0)
             print("\n" + ">"*60 + "\n A Monster Is Approaching You!!")
@@ -51,6 +54,7 @@ class Game():
             print("{} isn't attacking this turn.".format(self.monster))
 
     def player_turn(self):
+        """ Sequence of events during the player's turn """
         player_choice = input("Do you want to [A]ttack, [R]est, or [Q]uit \n").lower()
         if player_choice == 'a':
             print( "\n \n \n \n \n" + "O"*60)
@@ -75,6 +79,7 @@ class Game():
             self.player_turn()
 
     def cleanup(self):
+        """ Events that occur after a monster is killed """
         if self.monster.hit_points <= 0:
             self.player.experience += self.monster.experience
             print("You KILLED the {}".format(self.monster))
