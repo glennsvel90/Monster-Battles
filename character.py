@@ -4,11 +4,6 @@ from combat import Combat
 import random
 
 class Character(Combat):
-
-    attack_limit = 10
-    experience = 0
-    base_hit_points = 10
-
     """ The user player's character """
 
     attack_limit=10
@@ -66,19 +61,15 @@ class Character(Combat):
         return '{} (HP:{}, XP:{})'.format(self.name, self.hit_points,self.experience)
 
     def rest(self):
+        """ Make the user recover 1 HP """
 
         if self.hit_points < self.base_hit_points:
             self.hit_points += 1
 
-    def leveled_up(self):
-        return self.experience >= 5
-
-        """ Increase life hit points by 1 """
-
-        if self.hit_points<self.base_hit_points:
-            self.hit_points+=1
 
     def leveled_up(self):
         """ Level up the main character """
 
         return self.experience>=5
+        if self.hit_points<self.base_hit_points:
+            self.hit_points+=1
