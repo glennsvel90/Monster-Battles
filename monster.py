@@ -4,6 +4,7 @@ COLORS= ['yellow', 'red', 'blue', 'green']
 
 
 class Monster(Combat):
+    """ The enemy class that the main user will battle """
     min_hit_points=1
     max_hit_points=10
     min_experience=1
@@ -28,15 +29,18 @@ class Monster(Combat):
 
 
     def battlecry(self):
+        """ The sound the enemy monster makes when they appear """
         return self.sound.upper()
 
 
 class Goblin(Monster):
+    """ A goblin monster as the enemy """
     max_hit_points=3
     max_experience=4
     sound='gob'
 
 class Troll(Monster):
+    """ A troll monster as the enemy """
     min_hit_points=2
     max_hit_points=7
     min_experience=3
@@ -44,6 +48,7 @@ class Troll(Monster):
     sound='oooll'
 
 class Dragon(Monster):
+    """ A dragon monster as the enemy """
     min_hit_points=7
     max_hit_points=11
     min_experience=8
